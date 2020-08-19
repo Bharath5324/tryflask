@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} - microblog</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     <h1>Hello, {{ user.username }}</h1>
     {% for i in posts %}
         <div><p>{{ i.author.username }} says: </p><p>{{ i.body }}</p></div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
